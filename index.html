@@ -71,7 +71,7 @@
         // Adicionar resposta do bot ao chatbox
         const botMessage = document.createElement('div');
         botMessage.className = 'message bot';
-        botMessage.textContent = data.response;
+        botMessage.textContent = data[0].message.content;
         chatbox.appendChild(botMessage);
 
       } catch (error) {
