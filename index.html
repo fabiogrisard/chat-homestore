@@ -65,13 +65,13 @@
           return;
         }
 
-        const data = await response.json();
+        const data = await response.json();  // Processar a resposta como JSON
         console.log('Resposta recebida do webhook:', data);
 
         // Adicionar resposta do bot ao chatbox
         const botMessage = document.createElement('div');
         botMessage.className = 'message bot';
-        botMessage.textContent = data[0].message.content;
+        botMessage.textContent = data.response;  // Usar a resposta de texto simples
         chatbox.appendChild(botMessage);
 
       } catch (error) {
