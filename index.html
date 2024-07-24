@@ -68,10 +68,10 @@
         const text = await response.text();  // Processar a resposta como texto
         console.log('Resposta recebida do webhook:', text);
 
-        // Adicionar resposta do bot ao chatbox
+        // Adicionar resposta do bot ao chatbox usando innerHTML
         const botMessage = document.createElement('div');
         botMessage.className = 'message bot';
-        botMessage.textContent = text;  // Usar a resposta de texto simples
+        botMessage.innerHTML = text;  // Usar innerHTML para permitir HTML formatado
         chatbox.appendChild(botMessage);
 
       } catch (error) {
